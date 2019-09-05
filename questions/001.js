@@ -6,7 +6,7 @@ used with strings or numbers.
 */
 
 function uniq(arr) {
-  
+  // Write code here
 }
 
 export default uniq;

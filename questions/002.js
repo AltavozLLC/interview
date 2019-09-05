@@ -2,7 +2,7 @@
 Given the following data answer the questions below
 */
 
-const items = [
+export const items = [
   {
     name: "item 1",
     id: 2,
