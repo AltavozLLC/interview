@@ -1,0 +1,16 @@
+{
+  "name": "iquvia_eco_interview",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Evan Mallory <esopian@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  }
+}

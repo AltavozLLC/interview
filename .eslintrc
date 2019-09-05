@@ -1,0 +1,17 @@
+{
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolve": {
+      "moduleDirectory": ["node_modules", "src"]
+    }
+  }
+}
