@@ -5,7 +5,8 @@
   "author": "Evan Mallory <esopian@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "zip": "node _utils/zip.js"
   },
   "dependencies": {
     "@babel/core": "^7.5.5",
