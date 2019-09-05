@@ -47,9 +47,10 @@ export function getSortedUniqueValues(items) {
   // write code here
 }
 
-//  Create a function that returns an array of all the values of property 'b'.
+//  Create a function that returns an array of all the values of props with key b.
 export function getPropsB(items) {
   // write code here
+  // Example: ["b prop1", "b prop2"]
 }
 
 // Create a function that returns a plain javascript object that is indexed by name, and contains all the props.
