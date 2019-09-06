@@ -1,6 +1,8 @@
 # IQVIA ECOA Javascript
 This is the javascript ecoa interview project.  Questions should be answered using vanilla javascript and utilizing no external libraries.  Assume that you have full use of ES6 and Node 12.x.
 
+Look at test cases to help clearify questions.
+
 ### Getting Started
 
  1. Clone this repo
