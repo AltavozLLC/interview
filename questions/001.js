@@ -1,8 +1,12 @@
 /*
-Problem: Create a custom function called uniq, that takes an array, 
-and returns an array of unique values, without changing order. Keep 
-first item and discard remaining items. Items should be able to be 
-used with strings or numbers.
+Problem: 
+- Create a custom function called `uniq` that takes an array and 
+  returns a new array of unique values from that previous array.
+- The order of items should not change.
+- The function should be able to work with an input array of
+  strings and/or numbers.
+
+Look at test cases to help clarify questions.
 */
 
 function uniq(arr) {

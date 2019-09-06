@@ -2,6 +2,8 @@
 Write a function that takes the following existing 
 array and returns a new array that excludes any item(s) 
 where the name is equal to 'John’.
+
+Look at test cases to help clarify questions.
 */
 
 export const input = [
