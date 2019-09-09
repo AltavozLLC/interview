@@ -14,5 +14,6 @@ Look at test cases to help clarify questions.
 ### Submitting Answers
 
   1. Once complete, you can run `npm run zip` to create a compressed (zipped) file
-  2. Submit the `dist/answers.zip` file to your interviewer
+  2. This will generate a zipped file: `dist/answers.zip`
+  3. Upload that file to this link with your full name and email address: https://www.dropbox.com/request/CYYYZpXiV8tpMCts0sXl
 
