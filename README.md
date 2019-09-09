@@ -13,6 +13,6 @@ Look at test cases to help clarify questions.
 
 ### Submitting Answers
 
-  1. Once complete, you can run `npm run submit` to create a compressed (zipped) file
+  1. Once complete, you can run `npm run zip` to create a compressed (zipped) file
   2. Submit the `dist/answers.zip` file to your interviewer
 
