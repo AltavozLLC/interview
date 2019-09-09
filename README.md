@@ -15,5 +15,5 @@ Look at test cases to help clarify questions.
 
   1. Once complete, you can run `npm run zip` to create a compressed (zipped) file
   2. This will generate a zipped file: `dist/answers.zip`
-  3. Upload that file to this link with your full name and email address: https://www.dropbox.com/request/CYYYZpXiV8tpMCts0sXl
+  3. Upload that file via **[this link](https://www.dropbox.com/request/CYYYZpXiV8tpMCts0sXl)** with your full name and email address
 
