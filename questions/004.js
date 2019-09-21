@@ -21,5 +21,14 @@ export const input = [
 
 export function notJohn(existingArray) {
   // write code here
+  const newArr = [];
+
+  for (let itemIndex = 0; itemIndex < existingArray.length; itemIndex++) {
+    if (existingArray[itemIndex].name !== 'John') {
+      newArr.push(existingArray[itemIndex]);
+    }
+  }
+
+  return newArr;
 }
 

@@ -37,40 +37,96 @@ export const items = [
 // Create a function that returns one array of all item 'names'.
 export function getNames(items) {
   // write code here
+  const names = [];
+
+  for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
+    names.push(items[itemIndex].name);
+  }
+
+  return names;
 }
 
 // Create a function that returns one array of 'values'
 // (it should not be an array of arrays).
 export function getValues(items) {
   // write code here
+  let values = [];
+
+  for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
+    values = [...values, ...items[itemIndex].values];
+  }
+
+  return values;
 }
 
 // Create a function that returns an array of 'values' that is
 // unique and sorted (default javascript sort).
 export function getSortedUniqueValues(items) {
   // write code here
+  const values = [];
+
+  for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
+    const vals = items[itemIndex].values;
+
+    for (let valIndex = 0; valIndex < vals.length; valIndex++) {
+      if (values.indexOf(vals[valIndex]) === -1) {
+        values.push(vals[valIndex]);
+      }
+    }
+  }
+
+  return values.sort();
 }
 
 // Create a function that returns an array of all the values
 // of 'props' with key 'b'.
 export function getPropsB(items) {
   // write code here
+  const values = [];
+
+  for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
+    const { props } = items[itemIndex];
+
+    if (props.b) values.push(props.b);
+  }
+
+  return values;
 }
 
 // Create a function that returns a plain javascript object that
 // is indexed by 'name', and contains all the 'props'.
 export function getIndexedObject(items) {
   // write code here
+  return items.reduce((prev, cur) => {
+    prev[cur.name] = cur.props;
+
+    return prev;
+  }, {})
 }
 
 // Create a function that returns an array of all the keys returned
 // by getIndexedObject (from previous exercise)
 export function getNamesFromObjects(items) {
   // write code here
+
+  return Object.keys(items);
 }
 
 // Create a function that returns an array of 'values' that is
 // unique but sorted in descending numeric order.
 export function getSortedDescNumeric(items) {
   // write code here
+  const values = [];
+
+  for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
+    const vals = items[itemIndex].values;
+
+    for (let valIndex = 0; valIndex < vals.length; valIndex++) {
+      if (values.indexOf(vals[valIndex]) === -1) {
+        values.push(vals[valIndex]);
+      }
+    }
+  }
+
+  return values.sort((a, b) => a > b);
 }

@@ -11,4 +11,13 @@ const arrayB = [2, 4, 6, 0];
 
 export function difference(arrayA, arrayB) {
   // write code here
+  const newArr = [];
+
+  for (let itemIndex = 0; itemIndex < arrayA.length; itemIndex++) {
+    if (arrayB.indexOf(arrayA[itemIndex]) === -1) {
+      newArr.push(arrayA[itemIndex]);
+    }
+  }
+
+  return newArr;
 }

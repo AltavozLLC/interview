@@ -11,6 +11,15 @@ Look at test cases to help clarify questions.
 
 function uniq(arr) {
   // Write code here
+  const uniqArr = [];
+
+  for (let itemIndex = 0; itemIndex < arr.length; itemIndex++) {
+    if (uniqArr.indexOf(arr[itemIndex]) === -1) {
+      uniqArr.push(arr[itemIndex]);
+    }
+  }
+
+  return uniqArr;
 }
 
 export default uniq;
