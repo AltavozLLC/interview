@@ -13,7 +13,7 @@ Look at test cases to help clarify questions.
 
 ### Submitting Answers
 
-  1. Once complete, you can run `npm run zip` to create a compressed (zipped) file
-  2. This will generate a zipped file: `dist/answers.zip`
+  1. Once complete, you can run `npm run submit` to create a compressed (zipped) file
+  2. This will generate a zipped file: `dist/<name>-<date>.zip`
   3. Upload that file via **[this link](https://www.dropbox.com/request/CYYYZpXiV8tpMCts0sXl)** with your full name and email address
 
