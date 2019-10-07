@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const open = require('open');
 const fs = require('fs-extra');
 const zipSubmission = require('./zip');
+const runTests = require('./runTests');
 
 const experienceChoices = [
   'Unfamiliar',
@@ -90,8 +91,14 @@ const questions = [
 ];
 
 inquirer.prompt(questions).then(async (answers) => {
-  const contactPath = path.resolve(__dirname, '..', 'questions/contact.json');
-  fs.writeJSONSync(contactPath, answers, {
+  const submissionPath = path.resolve(__dirname, '..', 'questions/submission.json');
+
+  const testResults = await runTests();
+
+  fs.writeJSONSync(submissionPath, {
+    ...answers,
+    testResults,
+  }, {
     spaces: 2,
   });
 
@@ -100,7 +107,7 @@ inquirer.prompt(questions).then(async (answers) => {
   const name = answers.full_name.trim().replace(/ /gi, '_');
 
   const { dirPath } = await zipSubmission(`${name}-${timestamp}.zip`);
-  fs.removeSync(contactPath);
+  fs.removeSync(submissionPath);
   console.log(`Opening Directory (${dirPath})...`);
   open(dirPath);
 });
