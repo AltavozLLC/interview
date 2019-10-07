@@ -15,6 +15,18 @@ const experienceChoices = [
 const questions = [
   {
     type: 'input',
+    name: 'confirm',
+    message: "If you confirm that the submission you are making is complete and is work of your own creation, type \"CONFIRM\"",
+    validate: (input) => {
+      if(input === 'CONFIRM') {
+        return true;
+      }
+      
+      return new Error("You may not incomplete work or work that is not your own.")
+    }
+  },
+  {
+    type: 'input',
     name: 'full_name',
     message: "What's your full name?",
     validate: function (input) {
