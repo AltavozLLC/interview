@@ -1,5 +1,7 @@
-# IQVIA eCOA Javascript
-This is the javascript ecoa interview project. Questions should be answered using vanilla javascript and utilizing no external libraries. Assume that you have full use of ES6 and Node 12.x.
+# Take2 Take Home Interview
+This is the javascript interview project. Questions should be answered using vanilla javascript and utilizing no additional dependencies. Assume that you have full use of ES6 and Node 12.x.
+
+React questions can assume version 16.10+
 
 Look at test cases to help clarify questions.
 
@@ -15,5 +17,4 @@ Look at test cases to help clarify questions.
 
   1. Once complete, you can run `npm run submit` to create a compressed (zipped) file
   2. This will generate a zipped file: `dist/<name>-<date>.zip`
-  3. Upload that file via **[this link](https://www.dropbox.com/request/CYYYZpXiV8tpMCts0sXl)** with your full name and email address
-
+  3. Upload that file via **[this link](https://www.dropbox.com/request/)**
