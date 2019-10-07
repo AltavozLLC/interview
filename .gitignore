@@ -49,3 +49,6 @@ typings/
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
+
+# Contact Info
+questions/contact.info
