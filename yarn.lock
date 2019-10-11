@@ -2630,6 +2630,11 @@ jsbn@~0.1.0:
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
   integrity sha1-peZUwuWi3rXyAdls77yoDA7y9RM=
 
+jscheck@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/jscheck/-/jscheck-0.2.0.tgz#21c310a1b9923dd2d92beda7ae50a56b21a73cf9"
+  integrity sha1-IcMQobmSPdLZK+2nrlClayGnPPk=
+
 jsdom@^11.5.1:
   version "11.12.0"
   resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-11.12.0.tgz#1a80d40ddd378a1de59656e9e6dc5a3ba8657bc8"
