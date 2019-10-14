@@ -6,14 +6,19 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "zip": "node _utils/zip.js"
+    "submit": "node _utils/submit.js"
   },
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "archiver": "^3.1.1",
     "babel-jest": "^24.9.0",
-    "jest": "^24.9.0",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.0",
     "jscheck": "^0.2.0"
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "jest-silent-reporter": "^0.1.2",
+    "open": "^6.4.0"
   }
 }
