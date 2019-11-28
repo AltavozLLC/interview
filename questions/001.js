@@ -10,7 +10,15 @@ Look at test cases to help clarify questions.
 */
 
 function uniq(arr) {
-  // Write code here
+  var input = arr, idx=0, newArr=[], currVal=null;
+  while (idx < input.length) {
+    currVal = input[idx];
+    if(newArr.indexOf(currVal) === -1){
+      newArr.push(currVal);
+    }
+    idx++;
+    }
+  return newArr;
 }
 
 export default uniq;

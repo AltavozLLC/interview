@@ -20,6 +20,13 @@ export const input = [
 ];
 
 export function notJohn(existingArray) {
-  // write code here
+  var arr= existingArray, newArr = [];
+  newArr = arr.map(function(val,idx){
+    if(val.name !== 'John'){
+      return val;
+    }
+  });
+
+  return newArr;
 }
 

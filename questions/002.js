@@ -36,41 +36,80 @@ export const items = [
 
 // Create a function that returns one array of all item 'names'.
 export function getNames(items) {
-  // write code here
+  var arr=items, arrName=[];
+  arr.forEach(element => {
+    arrName.push(element.name);
+  });
+  return arrName;
 }
 
 // Create a function that returns one array of 'values'
 // (it should not be an array of arrays).
 export function getValues(items) {
-  // write code here
+  var arr=items, arrVal=[];
+  arr.forEach(element => {
+    arrVal.push(element.name);
+  });
+  arrVal.flat();
+  return arrVal;
 }
 
 // Create a function that returns an array of 'values' that is
 // unique and sorted (default javascript sort).
 export function getSortedUniqueValues(items) {
-  // write code here
+  var arr=items, arrVal=[];
+  arr.forEach(element => {
+    arrVal.push(element.name);
+  });
+  arrVal.flat();
+  arrVal = [...new Set(arrVal)];
+  arrVal.sort();
+  return arrVal;
 }
 
 // Create a function that returns an array of all the values
 // of 'props' with key 'b'.
 export function getPropsB(items) {
-  // write code here
+  var arr=items, arrName=[];
+  arr.forEach(element => {
+    if(element.props.b){
+      arrName.push(element.props.b);
+    }
+  });
+  return arrName;
 }
 
 // Create a function that returns a plain javascript object that
 // is indexed by 'name', and contains all the 'props'.
 export function getIndexedObject(items) {
-  // write code here
+  var arr=items, arrName={};
+  arr.forEach(element => {
+    arrName[element.name] = element.props;
+  });
+  return arrName;
 }
 
 // Create a function that returns an array of all the keys returned
 // by getIndexedObject (from previous exercise)
 export function getNamesFromObjects(items) {
-  // write code here
+  var arr=items, arrName={};
+  arr.forEach(element => {
+    arrName[element.name] = element.props;
+  });
+  return arrName;
 }
 
 // Create a function that returns an array of 'values' that is
 // unique but sorted in descending numeric order.
 export function getSortedDescNumeric(items) {
-  // write code here
+  var arr=items, arrVal=[];
+  arr.forEach(element => {
+    arrVal.push(element.name);
+  });
+  arrVal.flat();
+  arrVal = [...new Set(arrVal)];
+  arrVal.sort(function(a,b){
+    return Number(b) - Number (a);
+  })
+  return arrVal;
 }
