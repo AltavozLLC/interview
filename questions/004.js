@@ -6,7 +6,7 @@ where the name is equal to 'John’.
 Look at test cases to help clarify questions.
 */
 
-export const input = [
+const input = [
   { name: 'Carlos', id: 1 },
   { name: 'Mary', id: 2 },
   { name: 'John', id: 3 },
@@ -19,7 +19,11 @@ export const input = [
   { name: 'Toji', id: 0 },
 ];
 
-export function notJohn(existingArray) {
-  // write code here
+function notJohn(existingArray) {
+  const result_excl = [];
+  existingArray.filter(item => item.name !== 'John' ? result_excl.push(item) : []);
+  return result_excl;
 }
 
+const notJohn_arr = notJohn(input);
+console.log(notJohn_arr);

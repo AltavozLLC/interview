@@ -9,6 +9,13 @@ const arrayA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 const arrayB = [2, 4, 6, 0];
 */
 
-export function difference(arrayA, arrayB) {
-  // write code here
+function difference(arrayA, arrayB) {
+  const result_arr = [];
+  arrayA.filter(item => arrayB.indexOf(item) === -1 ? result_arr.push(item) : []);
+  return result_arr;
 }
+
+const arrayA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+const arrayB = [2, 4, 6, 0];
+const arr_diff = difference(arrayA, arrayB);
+console.log(arr_diff);

@@ -10,7 +10,14 @@ Look at test cases to help clarify questions.
 */
 
 function uniq(arr) {
-  // Write code here
+  const result_arr = [];
+  arr.filter(item => result_arr.indexOf(item) === -1 ? result_arr.push(item) : []);
+  return result_arr;
 }
 
-export default uniq;
+const arr = [1, '2', 3, 4, 4, 4, '5', '5', '5'];
+
+const uniq_arr = uniq(arr);
+console.log(uniq_arr);
+
+// export default uniq;
