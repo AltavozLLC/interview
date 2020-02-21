@@ -21,5 +21,12 @@ export const input = [
 
 export function notJohn(existingArray) {
   // write code here
+  const newObj = [];
+  existingArray.forEach(element => {
+    if(element.name !== 'John'){
+      newObj.push(element);
+    }
+  });
+  return newObj;
 }
 

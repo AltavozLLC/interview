@@ -1,3 +1,5 @@
+import { exists } from "fs";
+
 /*
 Problem: 
 - Create a custom function called `uniq` that takes an array and 
@@ -11,6 +13,27 @@ Look at test cases to help clarify questions.
 
 function uniq(arr) {
   // Write code here
+  let exists = false;
+  const output = [];
+  
+  arr.map(item => {
+    if (output.length > 0) {
+      output.map(result => {
+        if(parseInt(item) === parseInt(result)){
+          exists = false;
+          return;
+        }
+        exists = true;
+      })
+      if(exists == true){
+        output.push(item)
+      }
+    } else {
+      output.push(item)
+    }
+  });
+  console.log(output)
+  return output;
 }
 
 export default uniq;
