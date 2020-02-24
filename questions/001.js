@@ -10,7 +10,20 @@ Look at test cases to help clarify questions.
 */
 
 function uniq(arr) {
-  // Write code here
+
+  var map={}
+  // create a map with key as input elements and values as number of occurence count
+  arr.forEach(element => {
+    if(map[element]){
+      // increment the occurence count
+      map[element] = map[element]++;
+    }else{
+      map[element] = 1;
+    }
+  });
+
+  //filter the elements whose oocurent count is 1
+  return Object.keys(map).filter(i=> map[i]==1)
 }
 
 export default uniq;

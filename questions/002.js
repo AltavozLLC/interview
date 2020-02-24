@@ -3,7 +3,7 @@ Given the following data answer the questions below
 
 Look at test cases to help clarify questions.
 */
-
+import unique from "./001";
 export const items = [
   {
     name: "item 1",
@@ -37,40 +37,48 @@ export const items = [
 // Create a function that returns one array of all item 'names'.
 export function getNames(items) {
   // write code here
+  return items.map(item => item.name)
 }
 
 // Create a function that returns one array of 'values'
 // (it should not be an array of arrays).
 export function getValues(items) {
   // write code here
+  return items.reduce((a,item)=> [...a, ...item.values],[])
 }
 
 // Create a function that returns an array of 'values' that is
 // unique and sorted (default javascript sort).
 export function getSortedUniqueValues(items) {
   // write code here
+  return unique(items.map(item => item.values)).sort((a,b)=> a-b);
 }
+
 
 // Create a function that returns an array of all the values
 // of 'props' with key 'b'.
 export function getPropsB(items) {
   // write code here
+  return items.filter(item => item.props.b).map(item => item.props.b)
 }
 
 // Create a function that returns a plain javascript object that
 // is indexed by 'name', and contains all the 'props'.
 export function getIndexedObject(items) {
   // write code here
+  return items.map(item => ({[item.name]:item.props}));
 }
 
 // Create a function that returns an array of all the keys returned
 // by getIndexedObject (from previous exercise)
 export function getNamesFromObjects(items) {
   // write code here
+  return Object.keys(getIndexedObject(items));
 }
 
 // Create a function that returns an array of 'values' that is
 // unique but sorted in descending numeric order.
 export function getSortedDescNumeric(items) {
   // write code here
+  return unique(items.map(item => item.values)).sort((a,b)=> b-a);
 }
