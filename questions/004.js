@@ -21,5 +21,6 @@ export const input = [
 
 export function notJohn(existingArray) {
   // write code here
+  return existingArray.filter((val) => val.name != "John");
 }
 

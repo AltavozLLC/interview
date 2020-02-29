@@ -11,6 +11,7 @@ Look at test cases to help clarify questions.
 
 function uniq(arr) {
   // Write code here
+  return arr.filter((val, index, arr) => arr.indexOf(val) == index )
 }
 
 export default uniq;
