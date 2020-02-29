@@ -1,3 +1,5 @@
+import { arrowFunctionExpression } from "@babel/types";
+
 /* 
 Write a function which returns a new array that
 contains all items from arrayA except for the 
@@ -11,4 +13,13 @@ const arrayB = [2, 4, 6, 0];
 
 export function difference(arrayA, arrayB) {
   // write code here
+  var tempArr = [];
+  var cnt = 0;
+  var arrayB_str = arrayB.join('');
+  for (var i in arrayA){
+    if(arrayB_str.indexOf(arrayA[i] === false)){
+      tempArr[cnt++]= arrayA[i];
+    }
+  }
+  return tempArr;
 }

@@ -21,5 +21,15 @@ export const input = [
 
 export function notJohn(existingArray) {
   // write code here
+  const tempArr  = []
+  var cnt = 0;
+existingArray.map((value, index)=>{
+  if(value.name != 'John'){
+    tempArr[cnt++]= value;
+  }
+})
+  return tempArr;
 }
+
+notJohn(input);
 

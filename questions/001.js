@@ -11,6 +11,17 @@ Look at test cases to help clarify questions.
 
 function uniq(arr) {
   // Write code here
+  var tempArr = []
+  var count =0;
+  for(var i in arr){
+    if(tempArr.indexOf( arr[i]) === false){
+      tempArr[count++] = arr[i];
+    }
+  }
+  //console.log("testing")
+  console.log(tempArr);
+return tempArr;
 }
-
+const input = [1, 2, 3, 3, 3, 4, 4, 4, 4, 5];
+uniq(input);
 export default uniq;

@@ -36,6 +36,11 @@ export const items = [
 
 // Create a function that returns one array of all item 'names'.
 export function getNames(items) {
+  var tempArr = []
+  items.map((value, index)=>{
+    tempArr[index] = value.name;
+  })
+  return tempArr;
   // write code here
 }
 
@@ -43,24 +48,64 @@ export function getNames(items) {
 // (it should not be an array of arrays).
 export function getValues(items) {
   // write code here
+  var tempArr = []
+  const cnt =0;
+  items.map((value, index)=>{
+    values = value.values;
+    for (var i in values){
+      tempArr[cnt++] = values[i];
+    }
+  })
+  return tempArr;
 }
 
 // Create a function that returns an array of 'values' that is
 // unique and sorted (default javascript sort).
 export function getSortedUniqueValues(items) {
   // write code here
+  var tempArr = []
+  const cnt =0;
+  items.map((value, index)=>{
+    values = value.values;
+    for (var i in values){
+      if(!jQuery.inArray(tempArr, values[i])){
+      tempArr[cnt++] = values[i];
+      }
+    }
+  })
+  return tempArr.sort();
 }
 
 // Create a function that returns an array of all the values
 // of 'props' with key 'b'.
 export function getPropsB(items) {
   // write code here
+  var tempArr = []
+  const cnt =0;
+  items.map((value, index)=>{
+    props = value.props;
+    for (var key in values){
+      if(key == 'b'){
+        tempArr[cnt++] = props;
+        break;
+      }
+    }
+  })
+  return tempArr;
 }
 
 // Create a function that returns a plain javascript object that
 // is indexed by 'name', and contains all the 'props'.
 export function getIndexedObject(items) {
   // write code here
+  var tempArr = []
+  const cnt =0;
+  items.map((value, index)=>{
+    props = value.props;
+    tempArr[cnt++]= {name : value.name, props:values.props}
+  })
+  return tempArr;
+
 }
 
 // Create a function that returns an array of all the keys returned
