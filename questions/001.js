@@ -11,6 +11,21 @@ Look at test cases to help clarify questions.
 
 function uniq(arr) {
   // Write code here
+  var temp = {};
+  arr.forEach(element => {
+    if (!temp[element]) {
+      temp[element] = 1;
+    } else {
+      temp[element] = temp[element] + 1;
+    }
+  });
+
+  var uniqueArray = [];
+  for (const key in temp) {
+    uniqueArray.push(key);
+  }
+
+  return uniqueArray;
 }
 
 export default uniq;
