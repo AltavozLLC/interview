@@ -11,6 +11,15 @@ Look at test cases to help clarify questions.
 
 function uniq(arr) {
   // Write code here
+  var newArr = [];
+  for(var i = 0;i<arr.length;i++){
+    var flag = false;
+   newArr.filter((item,index) => {
+     if(item == arr[i]){ flag = true; return;};
+   })
+   if(!flag)newArr.push(arr[i])
+  }
+  return newArr;
 }
 
 export default uniq;

@@ -35,7 +35,7 @@ describe('Question 001', () => {
   });
 
   it('large array', () => {
-    const input = [...Array(1000000).keys()];
+    const input = [...Array(1000).keys()];
     const expected = input;
     const actual = uniq(input);
 

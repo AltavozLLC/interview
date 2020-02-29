@@ -11,4 +11,15 @@ const arrayB = [2, 4, 6, 0];
 
 export function difference(arrayA, arrayB) {
   // write code here
+  var newArr = [];
+  for(var i =0;i<arrayA.length;i++){
+    var flag = false;
+   arrayB.filter((item,index) => {
+     if(item == arrayA[i]) {
+       flag = true;
+       return;
+      }
+   })
+   if(!flag)newArr.push(arrayA[i])
+  }
 }

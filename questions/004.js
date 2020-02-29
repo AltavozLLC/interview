@@ -21,5 +21,10 @@ export const input = [
 
 export function notJohn(existingArray) {
   // write code here
+  var newArr = existingArray.filter((item,index) =>{
+    return item.name != 'john';
+  })
+
+  return newArr;
 }
 
