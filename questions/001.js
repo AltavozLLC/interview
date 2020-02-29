@@ -8,9 +8,27 @@ Problem:
 
 Look at test cases to help clarify questions.
 */
-
 function uniq(arr) {
-  // Write code here
+  let arrResponse = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (checkUnique(arr[i],arr) === false) {
+      arrResponse.push(arr[i]);
+    }
+  }
+  return arrResponse;
 }
+
+
+function checkUnique(v,arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === v){
+      return true;
+    }else{
+      return false;
+    } 
+  }
+  
+};
+
 
 export default uniq;

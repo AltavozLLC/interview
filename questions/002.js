@@ -36,6 +36,15 @@ export const items = [
 
 // Create a function that returns one array of all item 'names'.
 export function getNames(items) {
+  let returnArr = [];
+  if(items.length > 0){
+    items.forEach(data => {
+      if(data.name){
+        returnArr.push(data.name);
+      }
+    });
+  }
+  return returnArr;
   // write code here
 }
 
@@ -43,6 +52,16 @@ export function getNames(items) {
 // (it should not be an array of arrays).
 export function getValues(items) {
   // write code here
+  let returnArr = [];
+  if(items.length > 0){
+    items.forEach(data => {
+      if(data.values){
+        returnArr.push(data.values);
+      }
+    });
+  }
+  return returnArr;
+  
 }
 
 // Create a function that returns an array of 'values' that is

@@ -11,4 +11,24 @@ const arrayB = [2, 4, 6, 0];
 
 export function difference(arrayA, arrayB) {
   // write code here
+  var data = [], diff = [];
+
+  for (var i = 0; i < arrayA.length; i++) {
+      data[arrayA[i]] = true;
+  }
+
+  for (var i = 0; i < arrayB.length; i++) {
+      if (data[arrayB[i]]) {
+          delete data[arrayB[i]];
+      } else {
+          data[arrayB[i]] = true;
+      }
+  }
+
+  for (var val in data) {
+      diff.push(val);
+  }
+
+  return diff;
 }
+
