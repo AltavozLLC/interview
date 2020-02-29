@@ -37,40 +37,75 @@ export const items = [
 // Create a function that returns one array of all item 'names'.
 export function getNames(items) {
   // write code here
+   var result = items.map(function(e){
+        return e.name;
+   });
+   return result;
 }
 
 // Create a function that returns one array of 'values'
 // (it should not be an array of arrays).
 export function getValues(items) {
   // write code here
+  var result = items.map(function(e){
+    var resultObj = e.values.map(function(v){
+      return v;  
+   });
+  });
+  return result;
 }
 
 // Create a function that returns an array of 'values' that is
 // unique and sorted (default javascript sort).
 export function getSortedUniqueValues(items) {
   // write code here
+  var result = items.sort();
+  var resultObj = function(a,b){
+    return b-a;
+  }
+  return resultObj;
 }
 
 // Create a function that returns an array of all the values
 // of 'props' with key 'b'.
 export function getPropsB(items) {
   // write code here
+  var result = items.map(function(e){
+    return e.props.b;
+    
+ });
+ return result;
 }
 
 // Create a function that returns a plain javascript object that
 // is indexed by 'name', and contains all the 'props'.
 export function getIndexedObject(items) {
   // write code here
+  var result = items.map(function(e){
+    return e.props;
+    
+ });
+ return result;
 }
 
 // Create a function that returns an array of all the keys returned
 // by getIndexedObject (from previous exercise)
 export function getNamesFromObjects(items) {
   // write code here
+  var result = items.map(function(e){
+    return e;
+    
+ });
+ return result;
 }
 
 // Create a function that returns an array of 'values' that is
 // unique but sorted in descending numeric order.
 export function getSortedDescNumeric(items) {
   // write code here
+  var result = items.sort();
+  var resultObj = function(a,b){
+    return b-a;
+  }
+  return result;
 }

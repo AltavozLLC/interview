@@ -11,6 +11,7 @@ Look at test cases to help clarify questions.
 
 function uniq(arr) {
   // Write code here
+  let unique = [...new Set(arr)];
+  return unique;
 }
-
 export default uniq;

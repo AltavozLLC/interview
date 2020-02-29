@@ -21,5 +21,9 @@ export const input = [
 
 export function notJohn(existingArray) {
   // write code here
+  var result = existingArray.reduce(function(e,value){
+      return (e + e.name=='Deepak')
+  });
+  return result;
 }
 
