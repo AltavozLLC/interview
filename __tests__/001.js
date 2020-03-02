@@ -1,3 +1,5 @@
+import 'core-js';
+
 import uniq from '../questions/001';
 import { isEqualArray } from '../_utils/array';
 
