@@ -11,4 +11,7 @@ const arrayB = [2, 4, 6, 0];
 
 export function difference(arrayA, arrayB) {
   // write code here
+  return arrayA.filter( item => {
+    return arrayB.indexOf(item)<0;
+  })
 }

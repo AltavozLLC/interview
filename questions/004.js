@@ -21,5 +21,8 @@ export const input = [
 
 export function notJohn(existingArray) {
   // write code here
+  return input.filter( item => {
+    return item.name !== 'John';
+  })
 }
 
