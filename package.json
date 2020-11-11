@@ -5,7 +5,7 @@
   "author": "Evan Mallory <esopian@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "jest __tests__/index.js",
     "submit": "node _utils/submit.js"
   },
   "dependencies": {
