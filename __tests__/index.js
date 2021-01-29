@@ -3,11 +3,8 @@ import {
   uniq,
   insertAtPosition,
   getIndexedObject,
-  getSortedDescNumeric,
   sumOfValuesMoreThanN,
-  multer,
   promiseByComparison,
-  promiseByStrategy,
 } from '../questions/index';
 import { isEqualArray } from '../_utils/array';
 
@@ -35,7 +32,7 @@ describe('uniq', () => {
   });
 
   it('large array', () => {
-    const input = [...Array(1000000).keys()];
+    const input = [...Array(1000).keys()];
     const expected = input;
     const actual = uniq(input);
     expect(isEqualArray(expected, actual)).toBeTruthy();
@@ -98,24 +95,6 @@ describe('getIndexedObject', () => {
   });
 });
 
-describe('getSortedDescNumeric', () => {
-  it('base', () => {
-    const expected = [10, 6, 5, 4, 3, 2, 1, 0];
-    const actual = getSortedDescNumeric(items);
-    expect(actual).toEqual(expected);
-  });
-});
-
-describe('multer', () => {
-  it('base', () => {
-    const multiplyBy5 = multer(5);
-    expect(multiplyBy5(5)).toEqual(25);
-
-    const multiplyBy3 = multer(3);
-    expect(multiplyBy3(23)).toEqual(69);
-  });
-});
-
 describe('sumOfValuesMoreThanN', () => {
   it('base', () => {
     const actual1 = sumOfValuesMoreThanN(items, 6);
@@ -166,39 +145,4 @@ describe('promiseByComparison', () => {
   });
 });
 
-describe('promiseByStrategy', () => {
-  const slow = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'slow'));
-  const fast = new Promise((resolve, reject) => setTimeout(resolve, 100, 'fast'));
 
-  it('a-then-b', async () => {
-    jest.setTimeout(60000);
-    const result = await promiseByStrategy(slow, fast, 'a-then-b');
-    expect(result).toEqual('slowfast');
-  });
-
-  it('b-then-a', async () => {
-    jest.setTimeout(60000);
-    const result = await promiseByStrategy(slow, fast, 'b-then-a');
-    expect(result).toEqual('fastslow');
-  });
-
-  it('parallel', async () => {
-    jest.setTimeout(60000);
-    const result = await promiseByStrategy(slow, fast, 'parallel');
-    expect(result).toEqual('slowfast');
-  });
-
-  it('first', async () => {
-    jest.setTimeout(60000);
-    const slow2 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'slow'));
-    const fast2 = new Promise((resolve, reject) => setTimeout(resolve, 100, 'fast'));
-    const result = await promiseByStrategy(slow2, fast2, 'first');
-    expect(result).toEqual('fast');
-  });
-
-  it('unknown strategy', async () => {
-    jest.setTimeout(60000);
-    const result = await promiseByStrategy(slow, fast, 'foo');
-    expect(result).toEqual('unknown strategy');
-  });
-});
