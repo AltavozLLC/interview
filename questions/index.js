@@ -92,18 +92,6 @@ export function getIndexedObject(items) {
   // write code here
 }
 
-/* 
-  Problem: getSortedDescNumeric()
-  Arguments: 
-    - 'items' (see 'items' example above)
-  - Returns one array from all the numbers from the 'values' of each item in the 'items' array. 
-  - This will be a one-dimensional array, not an array of arrays.
-  - The returned number array must be unique and sorted in descending (high to low) numeric order.
-*/
-export function getSortedDescNumeric(items) {
-  // write code here
-}
-
 /*
   Problem: sumOfValuesMoreThanN()
   Arguments: 
@@ -114,19 +102,6 @@ export function getSortedDescNumeric(items) {
   - Look at test cases to help clarify expected results.
 */
 export function sumOfValuesMoreThanN(items, n) {
-  // write code here
-}
-
-/* 
-  Problem: multer()
-  Arguments: 
-    - x (number)
-  - Returns an function that will take an argument of a number
-  - When that returned function is called with a number, it should give a result which the product of x and 
-    this new number.
-  - Look at test cases to help clarify expected results.
-*/
-export function multer(x) {
   // write code here
 }
 
@@ -144,35 +119,5 @@ export function multer(x) {
     - 'a and b are equal'
 */
 export function promiseByComparison(a, b, ms) {
-  // write code here
-}
-
-/*
-  Problem: promiseByStrategy()
-  Arguments:
-    - a (promise)
-    - b (promise)
-    - strategy (string, either 'a-then-b', 'b-then-a' 'parallel', 'first')
-
-  - Runs the promises in a specific order specified by the 'strategy' argument.
-  - Returns a concatenated string value of the result of 'a' and/or 'b' depending on the
-    'strategy' argument:
-    - If strategy = 'a-then-b':
-      - Run 'a' and run 'b' sequentially in that order.
-      - Return one string with result of 'a' concatenated to result of 'b'.
-    - If strategy = 'b-then-a':
-      - Run 'b' and run 'a' sequentially in that order.
-      - Return one string with result of 'b' concatenated to result of 'a'.
-    - If strategy = 'parallel':
-      - Run both 'a' and 'b' in parallel.
-      - Return one string with result of 'a' concatenated to result of 'b'.
-    - If strategy = 'first':
-      - Run both 'a' and 'b' in parallel.
-      - Return one string of whichever promise resolves first.
-    - If strategy is anything else:
-      - Return string 'unknown strategy',
-  - This is an async function.
-*/
-export async function promiseByStrategy(a, b, strategy) {
   // write code here
 }
