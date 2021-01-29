@@ -144,3 +144,5 @@ describe('promiseByComparison', () => {
     expect(actualC).toEqual('a and b are equal');
   });
 });
+
+
