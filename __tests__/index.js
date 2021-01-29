@@ -32,7 +32,7 @@ describe('uniq', () => {
   });
 
   it('large array', () => {
-    const input = [...Array(10000).keys()];
+    const input = [...Array(1000).keys()];
     const expected = input;
     const actual = uniq(input);
     expect(isEqualArray(expected, actual)).toBeTruthy();
