@@ -92,6 +92,7 @@ describe('getIndexedObject', () => {
     };
     const actual = getIndexedObject(items);
     expect(JSON.stringify(actual)).toEqual(JSON.stringify(expected));
+    expect(Object.keys(actual).sort()).toEqual(['item 1', 'item 2', 'item 3', 'item 4']);
   });
 });
 
