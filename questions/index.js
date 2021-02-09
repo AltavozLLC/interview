@@ -7,27 +7,16 @@
 */
 
 /*
-  Problem: uniq()
-  Arguments: 
-    - 'arr' (array of strings and/or numbers)
-  - Returns a new array of unique values from 'arr'.
-  - Do not mutate the original array and maintain the order of elements.
+  uniq(arr): return a new array of unique values from 'arr'. 'arr' can contain strings and/or numbers.
 */
 export function uniq(arr) {
   // write code here
 }
 
 /*
-  Problem: insertAtPosition()
-  Arguments: 
-    - 'element' (number)
-    - 'list' (array of numbers)
-    - 'position (number)
-
-  - Return an array that inserts 'element' at given 'position' in the 'list'.
-  - If the 'element' is already in the array, do not insert it.
-  - If 'position' is greater than the number of items in the array, do not insert it.
-  - Do not mutate the original array and return a new array.
+  insertAtPosition(element: number, list: number[], position: number): return a new array that inserts 
+  'element' at a given 'position' in 'list'. If the 'element' is already in the 'list' or if 'position'
+  is greater than the number of items in the 'list', don't insert it.
 */
 export function insertAtPosition(element, list, position) {
   // write code here
@@ -81,43 +70,28 @@ export const items = [
 ];
 
 /* 
-  Problem: getIndexedObject()
-  Arguments: 
-    - 'items' (see 'items' example above)
-  - Returns a plain javascript object that is indexed by an item's 'name' and contains all its 'props'.
-  - Only indexes item by key if props exists for the item.
-  - Look at test cases to help clarify expected results.
+  getIndexedObject(items): return an object that is indexed by item's 'name' and contains all its 'props'.
+  Only index by key if 'props' exists for the item (no undefined).
 */
 export function getIndexedObject(items) {
   // write code here
 }
 
 /*
-  Problem: sumOfValuesMoreThanN()
-  Arguments: 
-    - items (see 'items' example above)
-    - n (number)
-  - Returns an array of 'id's for those items where the sum of all the numbers in the 
-    item's 'values' array is greater than 'n'.
-  - Look at test cases to help clarify expected results.
+  sumOfValuesMoreThanN(items, n: number): return a new array of "id's" for each item in items if the sum
+  of all numbers in 'values' is more than 'n'.
 */
 export function sumOfValuesMoreThanN(items, n) {
   // write code here
 }
 
 /*
-  Problem: promiseByComparison()
-  Arguments: 
-    - a (number)
-    - b (number)
-    - ms (number)
-  - Returns a Javascript promise that resolves within a specific time which is supplied
-    as 'ms' in milliseconds.
-  - The function evaluates values for `a` and `b` and the returned promise resolves to a
-    string value of one of the following based on the evaluation:
-    - 'a is greater than b'
-    - 'b is greater than a'
-    - 'a and b are equal'
+  promiseByComparison(a: number, b: number, ms: number): return a promise that resolves within a specific
+  time which is supplied ('ms'). Compare the values of 'a' and 'b' and the resolves the promise to a
+   string of one of the following:
+    - "a is greater than b"
+    - "b is greater than a"
+    - "a and b are equal"
 */
 export function promiseByComparison(a, b, ms) {
   // write code here
