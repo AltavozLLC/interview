@@ -50,20 +50,14 @@ const questions = [
   },
   {
     type: 'list',
-    name: 'graphql_exp',
-    message: 'How would you rank your GraphQL experience?',
-    choices: experienceChoices
-  },
-  {
-    type: 'list',
     name: 'sql_exp',
-    message: 'How would you rank your Sql experience?',
+    message: 'How would you rank your SQL experience?',
     choices: experienceChoices
   },
   {
     type: 'list',
     name: 'devops_exp',
-    message: 'How would you rank your Devops experience?',
+    message: 'How would you rank your DevOps experience?',
     choices: experienceChoices
   },
 ];
