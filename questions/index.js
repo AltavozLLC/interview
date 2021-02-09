@@ -113,7 +113,8 @@ export function sumOfValuesMoreThanN(items, n) {
     - ms (number)
   - Returns a Javascript promise that resolves within a specific time which is supplied
     as 'ms' in milliseconds.
-  - The promise evaluates a and b and returns one of the following based on the evaluation:
+  - The function evaluates values for `a` and `b` and the returned promise resolves to a
+    string value of one of the following based on the evaluation:
     - 'a is greater than b'
     - 'b is greater than a'
     - 'a and b are equal'
