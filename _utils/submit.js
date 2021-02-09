@@ -16,22 +16,10 @@ const experienceChoices = [
 const questions = [
   {
     type: 'input',
-    name: 'confirm',
-    message: "If you confirm that the submission you are making is complete and is work of your own creation, type \"CONFIRM\"",
-    validate: (input) => {
-      if(input === 'CONFIRM') {
-        return true;
-      }
-      
-      return new Error("You may not incomplete work or work that is not your own.")
-    }
-  },
-  {
-    type: 'input',
     name: 'full_name',
     message: "What's your full name?",
     validate: function (input) {
-      if(!input) {
+      if (!input) {
         return new Error('Field is Required')
       }
       return true;
@@ -42,21 +30,11 @@ const questions = [
     name: 'email',
     message: "What's your email?",
     validate: function (input) {
-      if(!input) {
+      if (!input) {
         return new Error('Field is Required')
       }
       return true;
     }
-  },
-  {
-    type: 'input',
-    name: 'phone',
-    message: "What's your best contact number? (optional)"
-  },
-  {
-    type: 'input',
-    name: 'resume',
-    message: "Link to Resume (optional)"
   },
   {
     type: 'list',
