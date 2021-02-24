@@ -75,7 +75,7 @@ inquirer.prompt(questions).then(async (answers) => {
   });
 
   const d = new Date();
-  const timestamp = `${d.getFullYear()}${d.getMonth().toString().padStart(2, '0')}${d.getDate().toString().padStart(2, '0')}`;
+  const timestamp = `${d.getFullYear()}${(d.getMonth() + 1).toString().padStart(2, '0')}${d.getDate().toString().padStart(2, '0')}`;
   const name = answers.full_name.trim().replace(/ /gi, '_');
 
   const { dirPath } = await zipSubmission(`${name}-${timestamp}.zip`);
