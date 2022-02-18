@@ -64,7 +64,6 @@ const questions = [
 
 inquirer.prompt(questions).then(async (answers) => {
   const submissionPath = path.resolve(__dirname, '..', 'questions/submission.json');
-
   const testResults = await runTests();
 
   fs.writeJSONSync(submissionPath, {
@@ -73,6 +72,10 @@ inquirer.prompt(questions).then(async (answers) => {
   }, {
     spaces: 2,
   });
+
+  const testsSrc = path.resolve(__dirname, '..', '__tests__/index.js');
+  const testsDest = path.resolve(__dirname, '..', 'questions/tests.js');
+  fs.copyFileSync(testsSrc, testsDest);
 
   const d = new Date();
   const timestamp = `${d.getFullYear()}${(d.getMonth() + 1).toString().padStart(2, '0')}${d.getDate().toString().padStart(2, '0')}`;
