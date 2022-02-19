@@ -5,7 +5,7 @@ const fs = require('fs-extra');
 const zipSubmission = require('./zip');
 const runTests = require('./runTests');
 
-const experienceChoices = [
+const choices = [
   'Unfamiliar',
   'Beginner',
   'Intermediate',
@@ -40,25 +40,25 @@ const questions = [
     type: 'list',
     name: 'react_exp',
     message: 'How would you rank your React.js experience?',
-    choices: experienceChoices
+    choices,
   },
   {
     type: 'list',
     name: 'node_exp',
     message: 'How would you rank your Node.js experience?',
-    choices: experienceChoices
+    choices,
   },
   {
     type: 'list',
     name: 'sql_exp',
     message: 'How would you rank your SQL experience?',
-    choices: experienceChoices
+    choices,
   },
   {
     type: 'list',
     name: 'devops_exp',
     message: 'How would you rank your DevOps experience?',
-    choices: experienceChoices
+    choices,
   },
 ];
 
