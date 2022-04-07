@@ -15,5 +15,5 @@ Look at test cases to help clarify questions.
 
   1. Once complete, you can run `npm run submit` to create a compressed (zipped) file
   2. This will generate a zipped file: `dist/<name>-<date>.zip`
-  3. Upload that file via **[this link](https://www.dropbox.com/request/CYYYZpXiV8tpMCts0sXl)** with your first name, last name, and email address
+  3. Upload that file via **[this link](https://www.dropbox.com/request/43UR2lBtpe36LpjixiHc)** with your first name, last name, and email address
 
