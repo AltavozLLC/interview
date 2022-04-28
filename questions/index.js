@@ -11,15 +11,26 @@
 */
 export function uniq(arr) {
   // write code here
+  return [...new Set(arr)]
 }
 
 /*
   insertAtPosition(element: number, list: number[], position: number): return a new array that inserts 
-  'element' at a given 'position' in 'list'. If the 'element' is already in the 'list' or if 'position'
-  is greater than the number of items in the 'list', don't insert it.
+  'element' at a given 'position' in 'list'. 
+  
+  | If the 'element' is already in the 'list' 
+  | if 'position' is greater than the number of items in the 'list', don't insert it.
 */
 export function insertAtPosition(element, list, position) {
   // write code here
+  if (position >= list.length) return list;
+  if (list.indexOf(element) >= 0) return list;
+
+  return [
+    ...list.slice(0, position),
+    element,
+    ...list.slice(position)
+  ]
 }
 
 /* 
@@ -74,7 +85,19 @@ export const items = [
   Only index by key if 'props' exists for the item (no undefined).
 */
 export function getIndexedObject(items) {
-  // write code here
+  let filtered = items.filter(item => {
+    if ('props' in item) return item
+  });
+
+  let result = {};
+  for (const item of filtered) {
+    result[item.name] = {
+      ...item.props
+    };
+  }
+
+
+  return result;
 }
 
 /*
@@ -82,17 +105,33 @@ export function getIndexedObject(items) {
   of all numbers in 'values' is more than 'n'.
 */
 export function sumOfValuesMoreThanN(items, n) {
-  // write code here
+  // Helper fn
+  const sumNumbersInArray = (previousValue, currentValue) => previousValue + currentValue
+  let valuesHigherThanNIndexes = [];
+
+  items.forEach((item, i) => {
+    if (item.values.reduce(sumNumbersInArray) > n) valuesHigherThanNIndexes.push(i + 1);
+  });
+
+  return valuesHigherThanNIndexes;
 }
 
 /*
-  promiseByComparison(a: number, b: number, ms: number): return a promise that resolves within a specific
-  time which is supplied ('ms'). Compare the values of 'a' and 'b' and the resolves the promise to a
-   string of one of the following:
+  promiseByComparison(a: number, b: number, ms: number): 
+  return a promise that resolves within a specific time which is supplied ('ms'). 
+  Compare the values of 'a' and 'b' and then resolves the promise to a string if one of the following:
     - "a is greater than b"
     - "b is greater than a"
     - "a and b are equal"
 */
 export function promiseByComparison(a, b, ms) {
-  // write code here
+  const callback = () => {
+    if (a > b) return "a is greater than b"
+    if (b > a) return "b is greater than a"
+    if (a === b) return "a and b are equal"
+  }
+
+  return new Promise((resolve) => {
+    setTimeout(resolve.bind(callback), ms)
+  });
 }
